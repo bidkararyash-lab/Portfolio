@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name — Portfolio</title>
+<meta name="description" content="Portfolio of Your Name, designer and developer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EEF0E6; --ink:#1B2A22; --muted:#5C6B61; --accent:#2F5BEA; --line:#C9CFBF; --card:#E3E7D6;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#14201A;--ink:#E6EBDD;--muted:#9AA89C;--accent:#7C9BFF;--line:#2D3E34;--card:#1B2B22}
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:18px/1.65 'Newsreader',Georgia,serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header.nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600}
+header.nav nav{display:flex;gap:24px}
+header.nav a{text-decoration:none}
+header.nav a:hover{color:var(--accent)}
+.hero{padding:12vh 0 10vh}
+.hero h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(3rem,10vw,7.5rem);line-height:.95;letter-spacing:-.04em;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero p{max-width:34ch;margin-top:28px;font-size:1.4rem;color:var(--muted);font-style:italic}
+.btns{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;padding:12px 22px;border-radius:999px;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{border-color:var(--accent)}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-family:'Bricolage Grotesque',sans-serif;font-size:2rem;letter-spacing:-.02em;margin-bottom:28px}
+.projects{display:grid;gap:20px}
+.project{display:grid;grid-template-columns:160px 1fr;gap:24px;padding:24px;background:var(--card);border-radius:14px;text-decoration:none}
+.project .thumb{aspect-ratio:1;border-radius:8px;background:var(--accent);opacity:.9}
+.project:nth-child(2) .thumb{background:var(--ink)}
+.project:nth-child(3) .thumb{background:var(--muted)}
+.project h3{font-family:'Bricolage Grotesque',sans-serif;font-size:1.4rem}
+.project p{color:var(--muted);margin:6px 0 10px}
+.tags{font-family:'Bricolage Grotesque',sans-serif;font-size:.85rem;color:var(--accent);font-weight:600}
+.project:hover h3{color:var(--accent)}
+.about{display:grid;grid-template-columns:2fr 1fr;gap:40px}
+.skills{list-style:none;padding:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600}
+.skills li{padding:8px 0;border-bottom:1px solid var(--line)}
+.contact a.big{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(1.6rem,5vw,3rem);letter-spacing:-.03em;text-decoration:none;border-bottom:4px solid var(--accent)}
+footer{padding:40px 0;color:var(--muted);font-size:.95rem}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero h1{animation:none}html{scroll-behavior:auto}}
+@media (max-width:640px){.project{grid-template-columns:1fr}.project .thumb{aspect-ratio:16/7}.about{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a href="#top">Your Name</a>
+    <nav><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <h1>I design and build useful websites.</h1>
+      <p>Hi, I'm Your Name, a developer based in Pune. I turn messy ideas into clear, fast products.</p>
+      <div class="btns">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <section id="work">
+      <h2>Selected work</h2>
+      <div class="projects">
+        <a class="project" href="#">
+          <div class="thumb"></div>
+          <div><h3>Project one</h3><p>A short description of the problem you solved and the result you achieved.</p><span class="tags">React, Node.js, PostgreSQL</span></div>
+        </a>
+        <a class="project" href="#">
+          <div class="thumb"></div>
+          <div><h3>Project two</h3><p>Describe what you built, who it was for, and your role in the project.</p><span class="tags">Figma, HTML, CSS</span></div>
+        </a>
+        <a class="project" href="#">
+          <div class="thumb"></div>
+          <div><h3>Project three</h3><p>Add a link to the live site or repository and mention one measurable outcome.</p><span class="tags">Python, Flask, APIs</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About me</h2>
+      <div class="about">
+        <div>
+          <p>Write two or three sentences about your background, what you care about, and the kind of work you want to do next. Keep it specific: name your studies, your last job, or a project you are proud of.</p>
+        </div>
+        <ul class="skills">
+          <li>JavaScript / TypeScript</li>
+          <li>React</li>
+          <li>Python</li>
+          <li>UI design</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Let's work together</h2>
+      <a class="big" href="mailto:you@example.com">you@example.com</a>
+      <p style="margin-top:20px"><a href="https://github.com/">GitHub</a> · <a href="https://linkedin.com/">LinkedIn</a> · <a href="#">Resume (PDF)</a></p>
+    </section>
+  </main>
+
+  <footer>&copy; 2026 Your Name</footer>
+</div>
+</body>
+</html>
